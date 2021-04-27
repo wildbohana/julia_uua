@@ -1,4 +1,4 @@
-# interval a b, vektor svih neparnih celih brojeva
+# interval a b, vektor svih neparnih celih brojeva u njemu
 
 function vektor(a,b)
 	v=[]
