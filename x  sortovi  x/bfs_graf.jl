@@ -33,5 +33,6 @@ end
 
 # kada ugrađuješ getPath, napravi if u==k za getPath i else za prolaz, na kraju return Int[]
 # getPath sa BFS uvek vraća najkraći mogući put
-# kada imaš uslov da je d<n, kod findall stavi da je d>0, i u toj petlji kao uslov dodaš i (G.V[v].d + G.AdjMatrix[u,v])<l, a kod izmena ispod d će viti G.V[v].d=G.V[u].d + G.AdjMatrix[u,v]
+# kada imaš uslov da je d<n, kod findall stavi da je d>0, i u toj petlji kao uslov dodaš i (G.V[v].d + G.AdjMatrix[u,v])<l
+# a kod izmena ispod d će viti G.V[v].d=G.V[u].d + G.AdjMatrix[u,v]
 # kod prolaza kroz gradove isl na kraju čvor postavi da bude beo da bi se moglo opet prolaziti kroz njega
