@@ -3,11 +3,11 @@
 function DFS!(G)
 	v=1:size(G.AdjMatrix, 1)
 	for u=v
-		G.V[u].color='W'		# d očigledno nije bitno ovde
+		G.V[u].color='W'			# d očigledno nije bitno ovde
 		G.V[u].pred=-1
 	end
 	for u=v
-		if G.V[u].color == 'W'  # radi samo sa belim čvorovima
+		if G.V[u].color == 'W'  		# radi samo sa belim čvorovima
 			DFS_visit!(G, u)
 		end
 	end
@@ -16,8 +16,8 @@ end
 function DFS_visit!(G, u)
 	G.V[u].color = 'G'
 	for v in findall(G.AdjMatrix[u,:].==1)
-		if G.V[v].color == 'W'  # i uvek samo sa belim čvorovima
-			G.V[v].pred=u		# d definitivno nije bitno kod DFS
+		if G.V[v].color == 'W'  		# i uvek samo sa belim čvorovima
+			G.V[v].pred=u			# d definitivno nije bitno kod DFS
 			DFS_visit!(G, v)
 		end
 	end
@@ -26,7 +26,6 @@ end
 
 
 # kada tražiš grupe tj ostrva, u polje d iz čvora ćeš čuvati broj grupe (bro)
-
 function DFS!(G)
 	v=1:size(G.AdjMatrix, 1)
 	for u=v
@@ -61,12 +60,12 @@ function DFS!(G, p, k)
 		G.V[u].color='W'
 		G.V[u].pred=-1
 	end
-	DFS_Visit!(G, p, k, p)		# wtf ahahah
+	DFS_Visit!(G, p, k, p)				# wtf ahahah
 end
 
 function DFS_Visit!(G, u, k, p)
 	if u==k
-		path=getPath(G, p, k)   # u drugom fajlu
+		path=getPath(G, p, k)   		# u drugom fajlu
 		println("Put: $path")
 	else
 		G.V[u].color='G'
