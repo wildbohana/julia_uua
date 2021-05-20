@@ -46,6 +46,7 @@ function grupe(G)
 	  		# i to iskoristimo tako što ćemo u pamti[1] pamtiti koliko el ima 
 			# u prvoj grupi, u pamti[2] koliko elemenata ima u grugoj itd
 			# tako što će nam G.V[u].d biti indeks kom elementu iz pamti[] pristupamo
+			# i taj element po redu ćemo da povećamo za 1 (zato se počinje od 0)
 	end
 	
 	return pamti
