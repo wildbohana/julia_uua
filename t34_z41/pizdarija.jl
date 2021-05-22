@@ -6,9 +6,8 @@ function grupe(A)
 	v=1:length(A)
 	pamti=[]	# ovde se smešta šta mi treba
 	for u in v
-		if findall(pamti.==A[u]) == []
-			push!(pamti, A[u])		# ako se u nizu pamti već ne nalazi broj koji se nalazi na u nizu A na poziciji u
-							# (to je ovo A[u] i findall), onda taj broj na adresi A[u] ubaci u niz pamti
+		if findall(pamti.==A[u]) == []		# ako se u nizu pamti već ne nalazi broj koji se nalazi na u nizu A na poziciji u
+			push!(pamti, A[u])		# (to je ovo A[u] i findall), onda taj broj na adresi A[u] ubaci u niz pamti
 		end
 	end
 	   						
