@@ -2,7 +2,6 @@
 # primer niza: A=[1 2 3 3 4 5 6 6 7 6 5 10 8 4 5 3 1 9 11 4]
 # u nizu moraš imati uzastopne vrednosti jer u suprotnom ne radi (nije za to dizajniran)
 
-
 function grupe(A)
 	v=1:length(A)
 	pamti=[]	# ovde se smešta šta mi treba
