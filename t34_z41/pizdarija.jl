@@ -4,7 +4,7 @@
 
 function grupe(A)
 	v=1:length(A)
-	pamti=[]	# ovde se smešta šta mi treba
+	pamti=[]					# ovde se smešta šta mi treba
 	for u in v
 		if findall(pamti.==A[u]) == []		# ako se u nizu pamti već ne nalazi broj koji se nalazi na u nizu A na poziciji u
 			push!(pamti, A[u])		# (to je ovo A[u] i findall), onda taj broj na adresi A[u] ubaci u niz pamti
@@ -22,7 +22,7 @@ function grupe(A)
 	return pamti
 end
 
-# d , tj ovde A[u] će u sebi imati broj grupe (1-n) a i niz pamti ima n elemenata što znači da se broj grupe može koristiti za pristup 
+# d, tj ovde A[u] će u sebi imati broj grupe (1-n) a i niz pamti ima n elemenata što znači da se broj grupe može koristiti za pristup 
 #elementima iz pamti i to iskoristimo tako što ćemo u pamti[1] brojati koliko elemenata ima u prvoj grupi, u pamti[2] koliko elemenata
 # ima u grugoj itd tako što će nam G.V[u].d (ovde A[u] biti indeks kom elementu iz pamti[] pristupamo i taj element po redu ćemo da 
 # povećamo za 1 svaki put kada naletimo na taj broj u nizu pamti (zato se počinje od 0)
