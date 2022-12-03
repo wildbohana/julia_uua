@@ -26,16 +26,17 @@ function DFS_Visit!(G, u, bro)
     G.V[u].color = 'B'
 end
 
+# objašnjenje u algoritam.jl
 function grupe(G)
 	v=1:size(G.AdjMatrix, 1)
-	pamti=[]				# ovde se smešta šta mi treba
+	pamti=[]
 	for u in v
 		if findall(pamti.==G.V[u].d) == []
 			push!(pamti, u)
-		end				# dobiju se neke loše vrednosti, nisu nam bitne, bitan nam je broj grupa samo
-	end					# samo setuješ ceo taj niz na nulu
+		end
+	end
 	
-	for i in 1:length(pamti)		# objašnjenje u pizdarija.jl
+	for i in 1:length(pamti)		
 		pamti[i]=0
 	end
 	
